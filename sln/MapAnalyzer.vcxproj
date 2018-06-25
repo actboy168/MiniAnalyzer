@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\MapAnalyzer\Attribute.cpp" />
+    <ClCompile Include="..\src\MapAnalyzer\ConvertTable.cpp" />
+    <ClCompile Include="..\src\MapAnalyzer\IniReader.cpp" />
+    <ClCompile Include="..\src\MapAnalyzer\MetaTable.cpp" />
+    <ClCompile Include="..\src\MapAnalyzer\ObjectManager.cpp" />
+    <ClCompile Include="..\src\MapAnalyzer\ObjReader.cpp" />
+    <ClCompile Include="..\src\MapAnalyzer\SlkReader.cpp" />
+    <ClCompile Include="..\src\MapAnalyzer\TxtReader.cpp" />
+    <ClCompile Include="..\src\MapAnalyzer\VariableData.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\MapAnalyzer\Attribute.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\BaseTable.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\Buffer.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\ConvertTable.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\Exception.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\File.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\IniBaseReader.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\IniReader.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\IniTable.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\IniWriter.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\MetaTable.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\ObjectId.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\ObjectManager.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\ObjReader.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\ObjTable.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\port_StormDll.h" />
+    <ClInclude Include="..\src\MapAnalyzer\port_StormLibStatic.h" />
+    <ClInclude Include="..\src\MapAnalyzer\Sequence.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\SlkReader.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\SlkTable.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\SlkWriter.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\Storm.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\TextReader.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\TxtReader.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\Util.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\VariableData.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\WtsReader.hpp" />
+    <ClInclude Include="..\src\MapAnalyzer\WtsTable.hpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8B8BF164-926F-4750-A847-90C7596C6A1A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MapAnalyzer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)..\lib\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\..\tmp\$(ProjectName)\$(Configuration)\</IntDir>
+    <IncludePath>../ThirdParty/StormLib/src;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\..\lib\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(SolutionDir)\..\tmp\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>USE_STORMLIB_STATIC;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>USE_STORMLIB_STATIC;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../ThirdParty/StormLib/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

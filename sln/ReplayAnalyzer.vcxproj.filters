@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="..\src\ReplayAnalyzer\RepAction.hpp">
+      <Filter>inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ReplayAnalyzer\RepBlock.hpp">
+      <Filter>inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ReplayAnalyzer\RepBuffer.hpp">
+      <Filter>inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ReplayAnalyzer\RepAnalyzer.hpp">
+      <Filter>inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ReplayAnalyzer\File.hpp">
+      <Filter>inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ReplayAnalyzer\Exception.hpp">
+      <Filter>inlcude</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\ReplayAnalyzer\RepAnalyzerAction.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ReplayAnalyzer\RepBuffer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ReplayAnalyzer\RepAnalyzerAction6B.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ReplayAnalyzer\RepAnalyzer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="inlcude">
+      <UniqueIdentifier>{d4abf248-870e-44b1-b7e5-d89194c1926f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{a4fa1204-3247-4a87-af80-30ce88fb401d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
